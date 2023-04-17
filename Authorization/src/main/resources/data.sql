@@ -1,0 +1,1 @@
+insert into user_details ( password, user_name) values ('vijay0','anil1');
