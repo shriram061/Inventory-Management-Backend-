@@ -1,4 +1,4 @@
-#Inventory Management System
+Inventory Management System
 This is an inventory management system for a store that allows a store manager to add, update, and view products in the inventory, mark products as discontinued, and set reorder points for products.
 
 Installation
@@ -26,3 +26,13 @@ Create a new branch for your changes.
 Make your changes and commit them with clear and concise commit messages.
 Push your changes to your fork.
 Submit a pull request with a description of your changes.
+License
+This project is released under the MIT License. See the LICENSE file for more information.
+
+Contact Information
+If you have any questions or concerns about the project, please contact the project team at example@email.com.
+
+
+
+
+
