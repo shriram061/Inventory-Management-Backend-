@@ -1,7 +1,7 @@
 Inventory Management System
 
 
-This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes microservices for adding products, updating quantities, and generating reports.
+This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes microservices for adding products, updating quantities, authentication and generating reports.
 
 
 
@@ -28,8 +28,15 @@ Running the Application
 To run the microservices, follow these steps:
 1.	Start the Eureka server using mvn spring-boot:run -pl eureka-server.
 2.	Start the product service using mvn spring-boot:run -pl product-service.
-3.	Start the quantity service using mvn spring-boot:run -pl quantity-service.
+3.	Start the authentication service using mvn spring-boot:run -pl authentication-service.
 4.	Start the report service using mvn spring-boot:run -pl report-service.
+
+  (or)
+1. Clone the repository
+2. create the database by writing "create database inventory1" in mysql
+3. Now in mysql write "CREATE USER 'readonlyuser'@'%' IDENTIFIED BY 'root';" and "GRANT SELECT ON inventory1.* TO 'readonlyuser'@'%'" lines respectively and execute them.  
+4. start the microserives and use the functionality
+ 
   
   
 API Documentation
@@ -54,3 +61,9 @@ To contribute to the project, follow these steps:
 4.	Push your changes to your fork.
 5.	Submit a pull request to the main repository.
 
+
+  
+Database Setup
+  
+  
+Create a inventory1 database for all the microservices to share. Create the necessary tables for the inventory management application. There should be at least one table for storing the details of the services being monitored. Create a readonly user for the database. There should be using in Microservice. If required, set up user accounts and permissions for accessing the database. Note: Make sure to provide the necessary details for connecting to the database in the configuration files of the microservices.
