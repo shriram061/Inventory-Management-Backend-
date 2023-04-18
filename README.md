@@ -27,7 +27,7 @@ Running the Application
   
 To run the microservices, follow these steps:
 1.	Start the Eureka server using mvn spring-boot:run -pl eureka-server.
-2.	Start the product service using mvn spring-boot:run -pl product-service.
+2.	Start the inventory management service using mvn spring-boot:run -pl inventorymanagement-service.
 3.	Start the authentication service using mvn spring-boot:run -pl authentication-service.
 4.	Start the report service using mvn spring-boot:run -pl report-service.
 
