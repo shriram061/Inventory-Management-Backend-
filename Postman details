@@ -1,0 +1,43 @@
+post - http://localhost:9876/add
+
+{
+    "productName":"nicycle",
+    "price":25000,
+    "quantity":10,
+    "validity":"2023-03-03"
+    
+}
+
+get - http://localhost:9876/view
+
+put - http://localhost:9876/view/update/1
+
+{
+    "productId":1,
+    "productName":"Mobile",
+    "price":519,
+    "quantity":0,
+    "validity":"r",
+    "status":"DUMMY"
+}
+
+DELETE - http://localhost:9876/delete/1
+
+POST - http://localhost:9876/search?keyword=DOG
+
+POST - http://localhost:8080/auth/register
+
+{
+    "userName":"camel",
+    "password":"siva",
+    "emailId":"vigneshshriram5@gmail.com"
+}
+
+POST - http://localhost:8080/auth/authenticate
+
+{
+    "username":"camelm",
+    "password":"siva"
+}
+=
+  
