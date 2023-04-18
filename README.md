@@ -42,7 +42,7 @@ To run the microservices, follow these steps:
 API Documentation
   
   
-To view the API documentation, navigate to http://localhost:8761/ and click on the "inventory-management-system" link. This will take you to the Swagger UI, where you can browse and test the endpoints.
+To view the API documentation, navigate to http://localhost:8761/ and click on the "inventory-management-system" link. This will take you to the Eureka Server , where you can browse and test the endpoints.
 Technologies Used
 •	Java 11
 •	Spring Boot 2.4.3
