@@ -1,4 +1,4 @@
-Inventory Management System
+#Inventory Management System
 This is an inventory management system for a store that allows a store manager to add, update, and view products in the inventory, mark products as discontinued, and set reorder points for products.
 
 Installation
