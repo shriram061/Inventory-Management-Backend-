@@ -5,7 +5,7 @@ This project is an inventory management system that allows store managers to add
 
 
 
-Prerequisites
+# Prerequisites
 
 
 •	Java 11 or later
@@ -13,7 +13,7 @@ Prerequisites
 •	Maven 3.6.3 or later
 
 
-Installation
+# Installation
 
 
 To install and run the project, follow these steps:
@@ -22,7 +22,7 @@ To install and run the project, follow these steps:
 3.	Build the project using mvn clean install.
   
   
-Running the Application
+# Running the Application
   
   
 To run the microservices, follow these steps:
@@ -39,7 +39,7 @@ To run the microservices, follow these steps:
  
   
   
-API Documentation
+# API Documentation
   
   
 To view the API documentation, navigate to http://localhost:8761/ and click on the "inventory-management-system" link. This will take you to the Eureka Server , where you can browse and test the endpoints.
@@ -51,7 +51,7 @@ Technologies Used
 •	Swagger
   
   
-Contributing
+# Contributing
   
   
 To contribute to the project, follow these steps:
@@ -63,7 +63,7 @@ To contribute to the project, follow these steps:
 
 
   
-Database Setup
+# Database Setup
   
   
 Create a inventory1 database for all the microservices to share. Create the necessary tables for the inventory management application. There should be at least one table for storing the details of the services being monitored. Create a readonly user for the database. There should be using in Microservice. If required, set up user accounts and permissions for accessing the database. Note: Make sure to provide the necessary details for connecting to the database in the configuration files of the microservices.
