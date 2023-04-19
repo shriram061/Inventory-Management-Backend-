@@ -1,4 +1,4 @@
-Inventory Management System
+# Inventory Management System
 
 
 This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes microservices for adding products, updating quantities, authentication and generating reports.
