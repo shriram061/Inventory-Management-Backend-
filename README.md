@@ -39,9 +39,7 @@ To run the microservices, follow these steps:
  
 # Architecture
   
-     The Inventory Management Application is designed as a microservice-based architecture. The application consists of three microservices, a Eureka server, and a centralized 
-   database. The microservices communicate with each other using the Feign client and are registered with the Eureka server. The Eureka server acts as a service 
-   registry and facilitates service discovery. The centralized database is used to store the details and data of each service.
+The Inventory Management Application is designed as a microservice-based architecture. The application consists of three microservices, a Eureka server, and a centralized database. The microservices communicate with each other using the Feign client and are registered with the Eureka server. The Eureka server acts as a service registry and facilitates service discovery. The centralized database is used to store the details and data of each service.
   
 # API Documentation
   
@@ -56,19 +54,16 @@ Technologies Used
   
 # Configuration
   
-    To configure the application, you can modify the application.properties files for each microservice. The files contain properties for configuring the database 
-  connection, server port, and other settings. You can also modify the Feign clients to change the endpoints used to check the  other service.
+To configure the application, you can modify the application.properties files for each microservice. The files contain properties for configuring the database connection, server port, and other settings. You can also modify the Feign clients to change the endpoints used to check the  other service.
   
   
 # Usage
   
-  Provide instructions on how to use the application from a inventory manager's and executive's perspective , including categorying products , searching for products by keyword, viewing 
-   product details, adding items to the cart, checking out and generate report for both manager and executive.
+Provide instructions on how to use the application from a inventory manager's and executive's perspective , including categorying products , searching for products by keyword, viewing product details, adding items to the cart, checking out and generate report for both manager and executive.
 
 # Admin functionality
   
-     Provide instructions on how to access the admin interface, and the functionality available to administrators, including managing inventory,
-   managing exective accounts, and generating reports.
+Provide instructions on how to access the admin interface, and the functionality available to administrators, including managing inventory, managing exective accounts, and generating reports.
   
 # Database Setup
   
