@@ -1,5 +1,6 @@
 package com.einstein.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -23,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
+public class Product implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
