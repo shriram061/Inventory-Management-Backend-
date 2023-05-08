@@ -1,4 +1,4 @@
-post - http://localhost:9876/add
+post - http://localhost:9876/add [add product]
 
 {
     "productName":"nicycle",
@@ -8,9 +8,9 @@ post - http://localhost:9876/add
     
 }
 
-get - http://localhost:9876/view
+get - http://localhost:9876/view  [view product]
 
-put - http://localhost:9876/view/update/1
+put - http://localhost:9876/view/update/{id} [update product]
 
 {
     "productId":1,
@@ -21,23 +21,35 @@ put - http://localhost:9876/view/update/1
     "status":"DUMMY"
 }
 
-DELETE - http://localhost:9876/delete/1
+DELETE - http://localhost:9876/delete/{id} [delete product]
 
-POST - http://localhost:9876/search?keyword=DOG
+POST - http://localhost:9876/search?keyword={keyword} [search product]
 
-POST - http://localhost:8080/auth/register
-
+POST - http://localhost:8080/auth/register   [register user]
+                  (or)
+       http://localhost:9876/auth/register
 {
     "userName":"camel",
     "password":"siva",
     "emailId":"vigneshshriram5@gmail.com"
 }
 
-POST - http://localhost:8080/auth/authenticate
-
+POST - http://localhost:8080/auth/authenticate [authenticate user]
+                     (or)
+       http://localhost:9876/auth/authenticate               
 {
     "username":"camelm",
     "password":"siva"
 }
-=
+
+POST - http://localhost:8080/auth/validate  [validate user]
+                   (or)
+       http://localhost:9876/auth/validate            
+(in authrization)
+bearer-token -> Token-<token-paste>
   
+GET - http://localhost:9876/user/viewuser  [list users]
+
+DELETE - http://localhost:9876/user/{id} [delete users]
+
+
