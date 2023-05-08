@@ -11,6 +11,7 @@ This project is an inventory management system that allows store managers to add
 •	Java 11 or later
 •	Spring Boot 2.4.3 or later
 •	Maven 3.6.3 or later
+• Redis server 3.0.504
 
 
 # Installation
@@ -36,6 +37,7 @@ To run the microservices, follow these steps:
 2. create the database by writing "create database inventory1" in mysql
 3. Now in mysql write "CREATE USER 'readonlyuser'@'%' IDENTIFIED BY 'root';" and "GRANT SELECT ON inventory1.* TO 'readonlyuser'@'%'" lines respectively and execute them.  
 4. start the microserives and use the functionality
+5. Start the redis server 
  
 # Architecture
   
@@ -51,6 +53,7 @@ Technologies Used
 •	Spring Cloud
 •	Eureka Server
 •	Swagger
+• Redis Cache
   
 # Configuration
   
@@ -68,4 +71,4 @@ Provide instructions on how to access the admin interface, and the functionality
 # Database Setup
   
   
-Create a inventory1 database for all the microservices to share. Create the necessary tables for the inventory management application. There should be at least one table for storing the details of the services being monitored. Create a readonly user for the database. There should be using in Microservice. If required, set up user accounts and permissions for accessing the database. Note: Make sure to provide the necessary details for connecting to the database in the configuration files of the microservices.
+Create a inventory1 database for all the microservices to share. Create the necessary tables for the inventory management application. There should be at least one table for storing the details of the services being monitored. Create a readonly user for the database. There should be using in Microservice. If required, set up user accounts and permissions for accessing the database. Note: Make sure to provide the necessary details for connecting to the database in the configuration files of the microservices. Also start the redis cache server.
