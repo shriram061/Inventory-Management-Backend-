@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,7 @@ import com.einstein.repository.ProductRepository;
 import com.einstein.repository.UserRepository;
 
 @Service
+@CacheConfig(cacheNames = "products")
 public class ProductServiceImpl implements ProductService {
 	@Autowired
 	ProductRepository productrepository;
@@ -32,6 +36,7 @@ public class ProductServiceImpl implements ProductService {
 	 * @return Returns the saved product.
 	 */
 	@Override
+	@CacheEvict(allEntries = true)
 	public Product saveProduct(Product product) {
 
 		Product prod = productrepository.findByProductNameAndPrice(product.getProductName(), product.getPrice());
@@ -69,8 +74,10 @@ public class ProductServiceImpl implements ProductService {
 	 * @return Returns a list of all products.
 	 */
 	@Override
+	@Cacheable
 	public List<Product> getAllProduct() {
 		System.out.println("load balance checking");
+		System.out.println("calling from database");
 		return productrepository.findAll();
 	}
 
@@ -84,6 +91,7 @@ public class ProductServiceImpl implements ProductService {
 	 * @return Returns the updated product.
 	 */
 	@Override
+	@CacheEvict(allEntries = true)
 	public Product updateProduct(Product products, int id) {
 		Product product = productrepository.findByProductId(id);
 		product.setProductId(products.getProductId());
@@ -122,6 +130,7 @@ public class ProductServiceImpl implements ProductService {
 	 * @param id The ID of the product to be deleted.
 	 */
 	@Override
+	@CacheEvict(allEntries = true)
 	public void deleteProduct(int id) {
 		productrepository.deleteById(id);
 	}
@@ -166,8 +175,9 @@ public class ProductServiceImpl implements ProductService {
 	 * @return the product with the given ID, or null if not found.
 	 */
 	@Override
+	@Cacheable(key="#id")
 	public Product viewProductById(int id) {
-
+		System.out.println("calling from database");
 		return productrepository.findByProductId(id);
 	}
 
