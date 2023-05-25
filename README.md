@@ -1,7 +1,7 @@
 # Inventory Management System
 
 
-This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes microservices for adding products, updating quantities, authentication and generating reports.
+This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It also includes a executive manager user-role that add products to cart, checkout and generate delivery reports. It includes microservices for adding products, updating quantities, authentication and generating reports for both store managers and executives.
 
 
 
