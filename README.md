@@ -1,7 +1,8 @@
 # Inventory Management System
 
 
-This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes a executive manager user-role that add products to the cart, checkout them and generate delivery reports. It also includes a external user who can contact the store manager for solving their query and present their valuable feedback. It includes 3 microservices( all connected through feign client ) for main CRUD operation, authentication and genearting reports.
+This project is an inventory management system that allows store managers to add, update, and view products in their inventory. It includes an executive manager user-role that adds product to the cart, checkout them and generate delivery reports. It also includes an external user who can contact the store manager for solving their query and provide with their valuable feedback. It includes 3 microservices( all connected through feign client ) for main CRUD operation, authentication and generating reports respectively.
+
 
 
 
